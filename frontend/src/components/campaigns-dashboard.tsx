@@ -315,7 +315,7 @@ export default function CampaignsDashboard() {
                             onClick={() => toggleCampaignStatus(campaign._id)}
                             className={`w-11 h-6 rounded-full relative ${
                               campaign.status === "active"
-                                ? "bg-gray-900"
+                                ? "bg-green-700"
                                 : "bg-gray-200"
                             }`}
                           >

@@ -1,5 +1,7 @@
 import axios from "axios";
-const BACKEND_URL = "http://localhost:5000/campaigns";
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const BACKEND_URL = `${API_BASE_URL}/campaigns`;
+
 
 export const getAllCampaigns = async () => {
   try {
@@ -47,7 +49,7 @@ export const updateCampaign = async (id: string, updateData: Partial<{ name: str
 
 export const deleteCampaign = async (id: string) => {
   try {
-    const response = await axios.delete(`http://localhost:5000/campaigns/${id}`);
+    const response = await axios.delete(`${BACKEND_URL}/${id}`);
     return response.data;
   } catch (error) {
     console.error("Error deleting campaign:", error);
