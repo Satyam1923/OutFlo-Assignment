@@ -4,11 +4,12 @@ import campaignRoutes from "./routes/campaignRoutes";
 import messageRoutes from "./routes/messageRoutes";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from 'cors';
 
 dotenv.config();
 const app = express();
 app.use(bodyParser.json());
-
+app.use(cors());
 mongoose.connect(process.env.MONGO_URI || "")
   .then(() => console.log("Connected to MongoDB"))
   .catch((error) => console.error("MongoDB connection error:", error));
