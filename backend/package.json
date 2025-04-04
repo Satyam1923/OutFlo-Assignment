@@ -22,11 +22,13 @@
   },
   "dependencies": {
     "@google/genai": "^0.7.0",
+    "@playwright/test": "^1.51.1",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
     "mongoose": "^8.13.1",
-    "openai": "^4.91.1"
+    "openai": "^4.91.1",
+    "playwright": "^1.51.1"
   }
 }
