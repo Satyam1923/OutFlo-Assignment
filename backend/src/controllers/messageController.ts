@@ -90,7 +90,7 @@ export const scrapeAndSaveProfile = async (req: Request, res: Response): Promise
     }
 
     browser = await chromium.launch({
-      headless: false, 
+      headless: true, 
       args: [
         '--no-sandbox',
         '--disable-setuid-sandbox',
